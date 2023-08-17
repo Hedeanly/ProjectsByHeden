@@ -1,0 +1,35 @@
+from random import randint
+
+t = ["m", "a", "f"]
+them = t[randint(0,2)]
+
+player = False
+while player == False:
+    player = input("Whats ur role: (m)age, (a)ssasin, (f)igher: ")
+    if player == them:
+        print(them)
+        print("tie")
+    elif player == "m":
+        print(them)
+        if them == "a":
+            print("u die")
+        elif them == "f":
+            print("u win")
+    elif player == "a":
+        print(them)
+        if them == "f":
+            print("u die")
+        elif them == "m":
+            print("u win")
+    elif player == "f":
+        print(them)
+        if them == "m":
+            print("u die")
+        elif them == "a":
+            print("u win")
+    else:
+        print("invalid play")
+    player = False
+    them = t[randint(0,2)]
+
+
